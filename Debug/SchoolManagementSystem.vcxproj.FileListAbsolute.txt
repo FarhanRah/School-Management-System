@@ -1,0 +1,2 @@
+C:\Users\farha\OneDrive\Desktop\Projects\SchoolManagementSystem\Debug\SchoolManagementSystem.exe
+C:\Users\farha\OneDrive\Desktop\Projects\SchoolManagementSystem\Debug\SchoolManagementSystem.pdb
