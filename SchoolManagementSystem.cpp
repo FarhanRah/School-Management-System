@@ -2,6 +2,7 @@
 #include <string>
 #include <ctime>
 #include <cassert>
+
 using namespace std;
 
 template <class T>
@@ -13,7 +14,7 @@ private:
 
 public:
 	//Constructors
-	SmarterArray(); //Implemented for you
+	SmarterArray();
 	SmarterArray(const T*, const int&); //Non-default constructor: Deep copy of the argument
 	SmarterArray(const SmarterArray<T>&); //Copy constructor: Deep copy of the argument
 
@@ -34,7 +35,7 @@ public:
 	bool operator == (const SmarterArray<T>&) const; //return true if sizes are equal and elements at same indexes are ==
 
 	template <class T>
-	friend ostream& operator << (ostream&, const SmarterArray<T>&); //Implemented for you
+	friend ostream& operator << (ostream&, const SmarterArray<T>&);
 };
 
 template <class T>
@@ -212,7 +213,7 @@ private:
 
 public:
 	//Constructors
-	Map(); //Implemented for you
+	Map();
 	Map(const Map<K, V>&); //Copy constructor. Deep copy.
 
 	//Assignment operator
@@ -232,10 +233,9 @@ public:
 	void append(const K&, const V&); //Append the key-value pair to the calling object
 	bool remove(const int&); //If the index argument is a valid index, then remove the key-value pair at the index argument
 							//from the calling object and return true. Otherwise return false. 
-							//You don't need to assert the index argument.
 
 	template <class K, class V>
-	friend ostream& operator << (ostream&, const Map<K, V>&); //Implemented for you
+	friend ostream& operator << (ostream&, const Map<K, V>&);
 };
 
 template <class K, class V>
@@ -535,7 +535,7 @@ private:
 	string fn, ln; //first name and last name
 	Date dob;
 public:
-	Student(); //Implemented for you
+	Student();
 	Student(const string& firstName, const string& lastName, const Date&);
 	string getFirstName() const;
 	string getLastName() const;
@@ -545,7 +545,7 @@ public:
 	void setDob(const Date&);
 	bool operator == (const Student&) const; //Return true if all the first names, last names, and date of births are equal
 	friend istream& operator >> (istream&, Student&);
-	friend ostream& operator << (ostream&, const Student&); //Implemented for you
+	friend ostream& operator << (ostream&, const Student&);
 };
 
 Student::Student()
@@ -966,7 +966,7 @@ char SchoolManagementSystem::generateRandomLetterGrade()
 
 int main()
 {
-	cout << "Welcome to Phantom College School Management System" << endl;
+	cout << "Welcome to Gusty School Management System" << endl;
 	cout << "===================================================" << endl;
 
 	srand(1);
@@ -996,13 +996,13 @@ int main()
 	cout << "The updated system information is..." << endl;
 	cout << sms << endl;
 
-	//See if Yonas Weldeselassie is a student in the school
-	int studentIndex = sms.findStudent("Yonas", "Weldeselassie");
+	//See if Farhan Rahmoon is a student in the school
+	int studentIndex = sms.findStudent("Farhan", "Rahmoon");
 	if (studentIndex == -1)
-		cout << "Yonas Weldeselassie is not a student in the school." << endl << endl;
+		cout << "Farhan Rahmoon is not a student in the school." << endl << endl;
 	else
 	{
-		cout << "Yonas Weldeselassie is a student in the school. Details below..." << endl;
+		cout << "Farhan Rahmoon is a student in the school. Details below..." << endl;
 		cout << sms.getStudent(studentIndex) << endl;
 		cout << sms.getStudentMap(studentIndex) << endl;
 	}
