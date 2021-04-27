@@ -31,7 +31,6 @@ public:
 	void append(const T&); //Append the argument to the calling object.
 	bool remove(const int&); //If the index argument is a valid index, then remove the element at the index argument
 							//from the calling object and return true. Otherwise return false. 
-							//You don't need to assert the index argument.
 	bool operator == (const SmarterArray<T>&) const; //return true if sizes are equal and elements at same indexes are ==
 
 	template <class T>
